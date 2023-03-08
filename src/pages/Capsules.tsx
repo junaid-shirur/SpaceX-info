@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-import { Button, FormGroup, Label, Input } from 'reactstrap';
+import { Button } from 'reactstrap';
 import Loader from "../components/loading"
 import { useQuery } from "react-query";
 import { getCapsules } from "../remote";

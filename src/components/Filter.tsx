@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, FormGroup, Label, Input } from 'reactstrap';
+import { FormGroup, Label, Input } from 'reactstrap';
 import { QueryFilter } from '../remote/type';
 
 interface FilterProps {
