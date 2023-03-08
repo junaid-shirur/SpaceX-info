@@ -10,7 +10,7 @@ const capsulesEndPoints = (page: number | string, query: QueryFilter) => ({
     data: {
         options: {
             pagination: true,
-            limit: 2,
+            limit: 6,
             offset: page,
         },
         query: (query.status || query.date || query.type) ? filterQuery(query) : {}

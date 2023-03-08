@@ -32,6 +32,7 @@ const Filter: React.FC<FilterProps> = ({ setFilter, value }) => {
                     id="statusSelect"
                     name="statusSelect"
                     type="select"
+                    defaultValue='Select Status'
                     value={value.status}
                     onChange={(e) => setFilter((s: any) => ({ ...s, status: e.target.value }))}
                 >
@@ -50,7 +51,7 @@ const Filter: React.FC<FilterProps> = ({ setFilter, value }) => {
                     id="typeSelct"
                     name="typeSelct"
                     type="select"
-                    defaultValue={value.type}
+                    defaultValue='Select Type'
                     value={value.type}
                     onChange={(e) => setFilter((s: any) => ({ ...s, type: e.target.value }))}
                 >
