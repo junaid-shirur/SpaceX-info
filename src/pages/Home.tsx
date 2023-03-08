@@ -16,7 +16,6 @@ const Home: React.FC<HomeProps> = () => {
     const navigate = useNavigate()
     if (status === 'loading') return <Loader />;
     if (error) return <Error error={error} />;
-    // @ts-ignore
     const company = JSON.parse(data)
     return (
         <> 
