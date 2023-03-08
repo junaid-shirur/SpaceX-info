@@ -1,0 +1,117 @@
+
+// Loader
+
+.loader {
+    &__container {
+        height: 100vh;
+        background-color: var(--helper-dark);
+        p {
+            font-size: 3rem;
+            color: var(--main-light);
+        }
+    }
+
+    &__dots--animation span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: var(--main-dark);
+        margin: 0px 5px;
+        background-color: var(--main-light);
+    }
+
+    &__dots--animation span:nth-child(1) {
+        animation: bounce 1s ease-in-out infinite;
+    }
+
+    &__dots--animation span:nth-child(2) {
+        animation: bounce 1s ease-in-out 0.33s infinite;
+    }
+
+    &__dots--animation span:nth-child(3) {
+        animation: bounce 1s ease-in-out 0.66s infinite;
+    }
+}
+
+@keyframes bounce {
+    0%,
+    75%,
+    100% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    25% {
+        -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        -o-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+}
+
+
+// Error
+
+.error__container {
+    height: 100vh;
+    background-color: var(--helper-dark);
+}
+
+// Main Header
+
+.header {
+    &__name {
+        font-weight: 700;
+        font-size: 50px;
+    }
+
+    &__description {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+    .header__description {
+        font-size: 25px;
+    }
+}
+
+.home__container {
+    background-image: url('https://www.spacex.com/static/images/backgrounds/dragon_feature.webp');
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+// Launches Article
+.article {
+    position: relative;
+    color: var(--main-dark);
+
+    &__image {
+        width: 100%;
+    }
+
+    &__header {
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        font-weight: 700;
+
+        h5 {
+            width: max-content;
+            color: var(--main-dark);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: var(--main-light);
+            background-color: rgba(33, 33, 33, 0.65);
+        }
+    }
+}

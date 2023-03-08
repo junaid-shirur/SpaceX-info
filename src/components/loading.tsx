@@ -1,28 +1,21 @@
-import React from "react";
-import { Spinner } from "reactstrap";
+import React from 'react';
+// style
+import './style.scss';
 
-const Loading: React.FC<any> = () => {
-    return (
-        <>
-            <div className="bg-gray-200 py-6 gap-x-5 flex items-center h-screen justify-center">
-                <Spinner
-                    color="primary"
-                    size="sm"
-                    type="grow"
-                />
-                <Spinner
-                    color="primary"
-                    size="sm"
-                    type="grow"
-                />
-                <Spinner
-                    color="primary"
-                    size="sm"
-                    type="grow"
-                />
-            </div>
-        </>
-    )
-}
+const Loader = () => (
+    <div className="loader__container d-flex justify-content-center align-items-center">
+        <p>
+            <span role="img" aria-label="rocket" className="mr-4">
+                🚀
+            </span>
+            It's Loading
+        </p>
+        <div className="loader__dots--animation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+);
 
-export default Loading
+export default Loader;

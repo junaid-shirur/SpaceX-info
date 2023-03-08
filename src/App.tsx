@@ -5,7 +5,8 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import Home from './components/Home';
+import Home from './pages/Home';
+import Capsules from './pages/Capsules';
 
 function App() {
   return (
@@ -13,8 +14,7 @@ function App() {
       <Routes>
         <Route path="*" element={<Navigate to='/home' />} />
         <Route path='/home' element={<Home />} />
-        <Route path='/details/:id' element={<Home/>} />
-        <Route path='/variables/:id/:key/:criteriaIdx' element={<Home/>} />
+        <Route path='/capsules/:page' element={<Capsules/>} />
       </Routes>
     </>
   );
