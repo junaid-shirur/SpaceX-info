@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormGroup, Label, Input } from 'reactstrap';
+import { FormGroup, Label, Input, Button } from 'reactstrap';
 import { QueryFilter } from '../remote/type';
 
 interface FilterProps {
@@ -11,6 +11,7 @@ const Filter: React.FC<FilterProps> = ({ setFilter, value }) => {
     const types = ['Dragon 1.0', 'Dragon 1.1', 'Dragon 2.0']
     return (
         <div className="flex gap-1 item-center">
+            <label className='font-bold text-white items-center cursor-pointer flex tracking-widest uppercase bg-transparent' onClick={() => setFilter((s: any) => ({ type: "", date: "", status: "" }))}>Clear 🔄</label>
             <FormGroup className="mb-0">
                 <Label className="text-white" for="datetimeSelect">
                     Time

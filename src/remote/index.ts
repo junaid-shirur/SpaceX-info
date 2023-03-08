@@ -45,7 +45,7 @@ export const getSpaceDetails: () => Promise<any> = async () => {
 }
 
 
-export const getCapsules: (page: number | string, query:QueryFilter ) => Promise<any> = async (page, query) => {
+export const getCapsules: (page: number | string, query: QueryFilter) => Promise<any> = async (page, query) => {
     const respo = await axios(capsulesEndPoints(page, query))
     return respo.data
 }
